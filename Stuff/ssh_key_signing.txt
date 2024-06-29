@@ -1,0 +1,7 @@
+This is a test for github signing
+
+Test 2: using commit -S
+
+Test 3: Using git config --global commit.gpgsign true to autosign
+
+Test 4: Changed passphrase to nothing to no more inputting passphrases all the time

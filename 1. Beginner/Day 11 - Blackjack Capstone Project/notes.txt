@@ -1,0 +1,10 @@
+Features to add:
+- Add a settings file, where you keep constant values such as inital money
+- Make the check_values function take an actual/shown parameter, default value actual, instead of teh usual return a dict
+- Combine show_hand from both player and dealer into 1 function, or make a show_hands function for both player and dealer
+- Implement card faces graphics
+- Allow player to restart game without ending program if they run out of money
+- Add input validation for prompt to continue playing
+- Upon game ending, show playing stats, i.e. You ended with $, thats a profit/loss of x
+- Implement session saving with json, and implement leaderboards and username taking
+- Add username validation for inappropraite usenames

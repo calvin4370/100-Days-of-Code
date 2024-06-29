@@ -1,0 +1,41 @@
+Skipped/Skimmed
+---------------
+Day 1: Beginner Stuff
+Day 2: Beginner Stuff
+Day 3: Beginner Stuff
+Day 4: Beginner Stuff
+Day 5: Beginner Stuff
+Day 6: Beginner Stuff
+Day 7: Beginner Stuff
+Day 8: Beginner Stuff, Caesar Cypher
+Day 9: Beginner Stuff
+Day 10: Beginner Stuff
+Day 12: Beginner Stuff
+Day 13: Beginner Stuff
+Day 14 (Beginner) Number Guessing Game Final Project but actually I'm doing Wordle instead
+Day 34: Incomplete, to restart
+
+Completed
+---------
+Day 15 (Beginner): Blackjack Capstone Project
+Day 16 (Intermediate): OOP
+
+
+In Progress
+-----------
+Day 35
+
+
+Review Later
+------------
+Day 13 (Beginner): Debugging
+
+
+To do
+-----
+Day 15 (Intermediate): ...
+
+
+Useful
+------
+Day 35: Keys, Authentication and Environment Variables (Also uses Twilio API to send SMSes to yourself)

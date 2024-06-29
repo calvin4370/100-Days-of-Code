@@ -1,0 +1,4 @@
+Day 14 actually called for a Final Project on a number guessing game, but I decided that was actually easier than the Blackjack Capstone Project of Day 11.
+So, I will instead do something similar — Wordle
+Instead of a simple game to guess a number from 1 to 100 within 5 tries, with hints on whether the guess was too high or too low
+Wordle is a game to guess a random 5-letter word from a dictionary of words within 6 tries, with hints given between guesses

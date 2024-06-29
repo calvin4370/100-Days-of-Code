@@ -1,0 +1,176 @@
+{
+    "cod": "200",
+    "message": 0,
+    "cnt": 4,
+    "list": [
+        {
+            "dt": 1704358800,
+            "main": {
+                "temp": 298.41,
+                "feels_like": 299.37,
+                "temp_min": 298.41,
+                "temp_max": 298.87,
+                "pressure": 1010,
+                "sea_level": 1010,
+                "grnd_level": 1007,
+                "humidity": 91,
+                "temp_kf": -0.46
+            },
+            "weather": [
+                {
+                    "id": 501,
+                    "main": "Rain",
+                    "description": "moderate rain",
+                    "icon": "10d"
+                }
+            ],
+            "clouds": {
+                "all": 83
+            },
+            "wind": {
+                "speed": 2.69,
+                "deg": 29,
+                "gust": 4.84
+            },
+            "visibility": 9495,
+            "pop": 1,
+            "rain": {
+                "3h": 6.9
+            },
+            "sys": {
+                "pod": "d"
+            },
+            "dt_txt": "2024-01-04 09:00:00"
+        },
+        {
+            "dt": 1704369600,
+            "main": {
+                "temp": 298.28,
+                "feels_like": 299.22,
+                "temp_min": 298.28,
+                "temp_max": 298.33,
+                "pressure": 1011,
+                "sea_level": 1011,
+                "grnd_level": 1009,
+                "humidity": 91,
+                "temp_kf": -0.05
+            },
+            "weather": [
+                {
+                    "id": 501,
+                    "main": "Rain",
+                    "description": "moderate rain",
+                    "icon": "10n"
+                }
+            ],
+            "clouds": {
+                "all": 92
+            },
+            "wind": {
+                "speed": 3.09,
+                "deg": 43,
+                "gust": 5.68
+            },
+            "visibility": 10000,
+            "pop": 1,
+            "rain": {
+                "3h": 5.65
+            },
+            "sys": {
+                "pod": "n"
+            },
+            "dt_txt": "2024-01-04 12:00:00"
+        },
+        {
+            "dt": 1704380400,
+            "main": {
+                "temp": 298.11,
+                "feels_like": 299.09,
+                "temp_min": 298.11,
+                "temp_max": 298.11,
+                "pressure": 1011,
+                "sea_level": 1011,
+                "grnd_level": 1010,
+                "humidity": 93,
+                "temp_kf": 0
+            },
+            "weather": [
+                {
+                    "id": 500,
+                    "main": "Rain",
+                    "description": "light rain",
+                    "icon": "10n"
+                }
+            ],
+            "clouds": {
+                "all": 100
+            },
+            "wind": {
+                "speed": 3.61,
+                "deg": 22,
+                "gust": 6.68
+            },
+            "visibility": 10000,
+            "pop": 0.49,
+            "rain": {
+                "3h": 0.83
+            },
+            "sys": {
+                "pod": "n"
+            },
+            "dt_txt": "2024-01-04 15:00:00"
+        },
+        {
+            "dt": 1704391200,
+            "main": {
+                "temp": 297.92,
+                "feels_like": 298.91,
+                "temp_min": 297.92,
+                "temp_max": 297.92,
+                "pressure": 1010,
+                "sea_level": 1010,
+                "grnd_level": 1008,
+                "humidity": 94,
+                "temp_kf": 0
+            },
+            "weather": [
+                {
+                    "id": 500,
+                    "main": "Rain",
+                    "description": "light rain",
+                    "icon": "10n"
+                }
+            ],
+            "clouds": {
+                "all": 100
+            },
+            "wind": {
+                "speed": 3.62,
+                "deg": 353,
+                "gust": 6.38
+            },
+            "visibility": 10000,
+            "pop": 0.6,
+            "rain": {
+                "3h": 0.7
+            },
+            "sys": {
+                "pod": "n"
+            },
+            "dt_txt": "2024-01-04 18:00:00"
+        }
+    ],
+    "city": {
+        "id": 1880574,
+        "name": "Kampong Pasir Ris",
+        "coord": {
+            "lat": 1.3985,
+            "lon": 103.9079
+        },
+        "country": "SG",
+        "population": 0,
+        "timezone": 28800,
+        "sunrise": 1704323247,
+        "sunset": 1704366597
+    }
+}

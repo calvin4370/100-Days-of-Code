@@ -1,0 +1,7 @@
+Stuff to implement:
+- make the alphabet list that appears QWERTY shaped to be more like the actual Wordle
+- implement json usage to save each round played
+- implement a leaderboard system
+- use matplotlib to plot a line chart of number to times each number of guesses has been done
+- design a web application version that can be shared to others via a link
+- design a mobile app version that can be sent to others via a link

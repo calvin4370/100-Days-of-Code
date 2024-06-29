@@ -1,0 +1,3 @@
+https://opentdb.com/
+
+Go here to use their API to generate json of trivia questions added by the public and verified by site admins

@@ -1,0 +1,17 @@
+Absolute File Path
+------------------
+- Always starts from the root directory, C: in Windows, Macintosh HD on Mac, for example
+
+e.g. this file's absolute path is C:\Users\Calvi\Desktop\100-Days-of-Code\Intemediate\Day 24 - Files, Directories and Paths\file_paths.txt
+
+When writing python code, the root folder is just /, no need to write C:/
+
+
+Relative File Path
+------------------
+- starts from the working directory
+
+./ means the working directory
+you could shorten it by missing out the ./ also
+
+../ refers to the parent folder of the working directory you are currently in
