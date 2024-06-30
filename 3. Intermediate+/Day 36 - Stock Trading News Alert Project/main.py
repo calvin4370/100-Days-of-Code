@@ -17,12 +17,12 @@ NEWSAPI_KEY = os.environ['NEWSAPI_KEY']
 stocks_with_big_change = {} # stock_ticker: (stock_name, percentage_change)
 
 # Check when STOCK price increase/decreases by 5% between opening stock price and closing stock price
-datetime_now = datetime.datetime.now()
+datetime_now = datetime.datetime.now() - datetime.timedelta(days=2) # NOTE I minuses 2 days to take us to thurs
 yst_date_time = datetime_now - datetime.timedelta(days=1)
-two_days_ago_date_time = datetime_now - datetime.timedelta(days=2)
+# two_days_ago_date_time = datetime_now - datetime.timedelta(days=2)
 tdy_date = datetime_now.strftime('%Y-%m-%d')
 yst_date = yst_date_time.strftime('%Y-%m-%d')
-two_days_ago_date = two_days_ago_date_time.strftime('%Y-%m-%d')
+# two_days_ago_date = two_days_ago_date_time.strftime('%Y-%m-%d')
 
 stock_params = {
     'function': 'TIME_SERIES_DAILY',
@@ -35,18 +35,19 @@ for ticker, name in stocks.items():
     data = response.json()
 
     with open('data.json', 'w') as file:
-        print(f'Updated data.json with {data}')
+        print(f'Updated data.json')
         import json
         json.dump(data, file)
     
-    tdy_data = data['Time Series (Daily)'][yst_date]
+    tdy_data = data['Time Series (Daily)'][tdy_date]
     yst_data = data['Time Series (Daily)'][yst_date]
 
     tdy_closing_price = float(tdy_data['4. close'])
     yst_closing_price = float(yst_data['4. close'])
     percentage_change = round((tdy_closing_price - yst_closing_price) / yst_closing_price * 100, 2)
+    print(f'% change calc for {ticker}:\n    tdy_c_p={tdy_closing_price}, yst_c_p={yst_closing_price}, %chg={percentage_change}%')
 
-    if abs(percentage_change) >= 5:
+    if abs(percentage_change) >= 0:
         stocks_with_big_change[ticker] = (name, percentage_change)
 
 
@@ -58,7 +59,7 @@ news_params = {
     'from': yst_date,
     'to': tdy_date,
     'language': 'en',
-    'sortBy': 'popularity',
+    'sortBy': 'relevancy',
 }
 for ticker, attributes in stocks_with_big_change.items():
     name, percentage_change = attributes
@@ -72,12 +73,13 @@ for ticker, attributes in stocks_with_big_change.items():
     # Update each entry to ticker: (name, percentage_change, list_of_articles)
     stocks_with_big_change[ticker] = (name, percentage_change, articles)
 
+print(f"stocks_with_big_change has {len(stocks_with_big_change)} stocks")
 
 # Send a seperate message with the percentage change and each article's title and description to your phone number. 
 # Twilio API
 # With environment variables
-account_sid = os.environ["TWILIO_WHATSAPP_SID"] # For WhatsApp only
-auth_token = os.environ["TWILIO_WHATSAPP_AUTH_TOKEN"] # For WhatsApp only
+account_sid = os.environ["TWILIO_WHATSAPP_SID"] # For WhatsApp / SMS
+auth_token = os.environ["TWILIO_WHATSAPP_AUTH_TOKEN"] # For WhatsApp / SMS
 my_phone_number = os.environ["PERSONAL_PHONE_NUMBER"]
 
 client = Client(account_sid, auth_token)
@@ -89,22 +91,24 @@ for ticker, attributes in stocks_with_big_change.items():
     if percentage_change > 0:
         body += f'{ticker} ({name}): 🔼{percentage_change}%\n'
     else:
-        body += f'{ticker} ({name}): 🔻-{percentage_change}%\n'
+        body += f'{ticker} ({name}): 🔻{percentage_change}%\n'
     
     # Link to articles
     for article in articles:
         body += f"""\n*{article['source']['name']}: {article['title']}*\n
-        {article['description']}\n
-        {article['url']}\n\n"""
+    {article['description']}\n
+    {article['url']}\n\n"""
 
     message = client.messages.create(
         body=body.rstrip(),
-        from_="whatsapp:+14155238886",
-        to=f'whatsapp:{my_phone_number}',
+        from_="+17723561970", # Twilio US Phone Number
+        to=f'{my_phone_number}',
     )
 
-    print(f'DEBUG: Sent {len(articles)} articles on {ticker} to your WhatsApp')
+    print(f'DEBUG: Sent {len(articles)} articles on {ticker} to your SMS')
 
+if not stocks_with_big_change:
+    print(f'No stocks in your watchlist experienced a notable change in price.')
 
 #Optional: Format the SMS message like this: 
 """:

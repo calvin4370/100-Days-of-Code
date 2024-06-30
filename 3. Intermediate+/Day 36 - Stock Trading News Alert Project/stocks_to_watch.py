@@ -7,7 +7,7 @@ stocks = {
     # 'GOOG': 'Alphabet Inc',
     # 'MSFT': 'Microsoft Corp',
     # 'AMZN': 'Amazon Com',
-    # 'TSM': 'Taiwan Semi',
+    'TSM': 'Taiwan Semi',
     # 'AAPL': 'Apple Inc',
     # 'BA': 'Boeing',
 
