@@ -1,4 +1,10 @@
+# To use .gitignore, add the paths to the files with '/' instead of '\'
+
+#
 3. Intermediate+/Day 32 - Send Emails (smtplib) and Manage Dates (datetime)/Birthday Wisher
 
 # Day 37
 3. Intermediate+/Day 37 - Habit Tracking Project (API Post Requests and Headers)/pixela_user_info.py
+
+# Day 39 - Flight Deal Finder
+3. Intermediate+/Day 39 - Flight Deal Finder/API_KEYS.py

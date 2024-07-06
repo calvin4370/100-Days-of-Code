@@ -84,7 +84,7 @@ def add_row(date, time, exercise, duration, calories):
             "calories": calories
         }
     }
-    # I set my sheety API to require an auth key to edit this specific sheets, I set it to the same as my Sheety API key, but the format is as so:
+    # I set my sheety API to require an auth key to edit this specific sheets, I set it to the same as my Nutritionix API key, but the format is as so:
     sheet_response = requests.post(sheet_endpoint, json=sheet_inputs, headers={'Authorization': f'Bearer {API_KEY}'})
     print(sheet_response.text) # For debug in console
 
