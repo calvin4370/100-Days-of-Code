@@ -1,0 +1,23 @@
+html {
+    background-color: black;
+}
+
+h2 {
+    font-size: small
+}
+
+#poster {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    color: white;
+    font-family: "Libre Baskerville", serif;
+    text-align: center;
+}
+
+#daenerys-with-egg {
+    border: 5px solid white;
+    width: 100%;
+}
+
