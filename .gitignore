@@ -1,5 +1,8 @@
 # To use .gitignore, add the paths to the files with '/' instead of '\'
 
+# Completed Days txt
+Completed Days.txt
+
 #
 3. Intermediate+/Day 32 - Send Emails (smtplib) and Manage Dates (datetime)/Birthday Wisher
 
@@ -8,3 +11,6 @@
 
 # Day 39 - Flight Deal Finder
 3. Intermediate+/Day 39 - Flight Deal Finder/API_KEYS.py
+
+# Day 46 - Spotify Time Machine
+3. Intermediate+/Day 46 - Create Spotify Playlist using Musical Time Machine/tokens.json
